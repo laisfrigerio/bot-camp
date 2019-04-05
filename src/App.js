@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import BtnBotcamp from './components/BtnBotcamp/index';
 import LogoBotcamp from './components/LogoBotcamp/index';
-import './reset.css';
+import './styles/reset.css';
 
 class App extends Component {
     render() {
         return (
-            <div>
+            <Fragment>
                 <LogoBotcamp/>
                 <BtnBotcamp/>
-            </div>
+            </Fragment>
         );
     }
 }
