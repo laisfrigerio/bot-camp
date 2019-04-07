@@ -9,7 +9,7 @@ const Logout = styled.button`
     cursor: pointer;
 `;
 
-const LogoutBtnBotcamp = () => {
+const LogoutBotcamp = () => {
     return (
         <Logout>
             <Image
@@ -22,4 +22,4 @@ const LogoutBtnBotcamp = () => {
     );
 };
 
-export default LogoutBtnBotcamp;
+export default LogoutBotcamp;

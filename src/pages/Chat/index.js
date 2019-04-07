@@ -1,14 +1,14 @@
 import React from "react";
 
-import HeaderWrapper from "../../components/wrapper/HeaderWrapper";
+import HeaderWrapper from "../../components/HeaderWrapper";
 import LogoBotcamp from "../../components/LogoBotcamp";
-import LogoutBtnBotcamp from "../../components/LogoutBtnBotcamp";
+import LogoutBotcamp from "../../components/LogoutBotcamp";
 
 const Chat = () => {
     return (
         <HeaderWrapper>
-            <LogoBotcamp/>
-            <LogoutBtnBotcamp />
+            <LogoBotcamp width='200px'/>
+            <LogoutBotcamp />
         </HeaderWrapper>
     );
 };

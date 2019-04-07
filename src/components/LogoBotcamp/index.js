@@ -3,12 +3,12 @@ import React from 'react';
 import Image from "../ImageBotcamp";
 import logo from "../../img/botcamp.png";
 
-const LogoBotcamp = () => (
+const LogoBotcamp = ({width, height = 'auto'}) => (
     <Image
         src={logo}
         alt='logo-botcamp'
-        width='250px'
-        height='auto'
+        width={width}
+        height={height}
     />
 );
 

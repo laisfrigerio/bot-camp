@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import background from '../../../img/background.svg';
+import background from '../../img/background.svg';
 
 const LoginWrapper = styled.main`
     box-sizing: border-box;
