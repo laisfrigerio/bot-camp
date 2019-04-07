@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import logo from '../../img/botcamp.svg';
 
-const Image = styled.img.attrs(({src, alt}) => ({
+const Logo = styled.img.attrs(({src, alt}) => ({
     alt: alt,
     src: src
 }))`
@@ -10,7 +10,7 @@ const Image = styled.img.attrs(({src, alt}) => ({
 `;
 
 const LogoBotcamp = () => (
-    <Image src={logo} alt='logo-botcamp' />
+    <Logo src={logo} alt='logo-botcamp' />
 );
 
 export default LogoBotcamp;
