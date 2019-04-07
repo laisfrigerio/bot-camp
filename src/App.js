@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import BtnBotcamp from './components/BtnBotcamp/index';
-import LogoBotcamp from './components/LogoBotcamp/index';
-import LoginWrapper from './components/LoginWrapper/index';
+
 import './styles/reset.css';
+import Login from "./pages/Login";
+import Chat from "./pages/Chat";
 
 class App extends Component {
     render() {
         return (
-            <LoginWrapper>
-                <LogoBotcamp/>
-                <BtnBotcamp content='Login' />
-            </LoginWrapper>
+            <Login />
         );
     }
 }
