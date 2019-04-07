@@ -10,7 +10,7 @@ const HeaderWrapper = styled.header`
     background-color: #1a1a3c;
     width: 100vw;
     height: auto;
-    padding: 5px 5px;
+    padding: 10px 16px;
 `;
 
 export default HeaderWrapper;
