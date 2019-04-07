@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
-const BtnBotCamp = styled.button`
+const Button = styled.button`
     color: #fff;
     background-color: #ee3e25;
     width: 280px;
@@ -10,4 +11,5 @@ const BtnBotCamp = styled.button`
     text-transform: uppercase;
 `;
 
+const BtnBotCamp = ({ content }) => <Button>{content}</Button>;
 export default BtnBotCamp;
