@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from "../ImageBotcamp";
-import logo from "../../img/botcamp.svg";
+import logo from "../../img/botcamp.png";
 
 const LogoBotcamp = () => (
     <Image
