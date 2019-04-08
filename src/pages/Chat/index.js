@@ -1,19 +1,30 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
+import ChatWrapper from '../../components/ChatWrapper';
 import HeaderWrapper from '../../components/HeaderWrapper';
+import FooterWrapper from '../../components/FooterWrapper';
 import LogoBotcamp   from '../../components/LogoBotcamp';
 import LogoutBotcamp from '../../components/LogoutBotcamp';
 import InputBotcamp from '../../components/InputBotcamp';
+import AttachmentBotcamp from '../../components/AttachmentBotcamp';
+import MicrophoneBotcamp from '../../components/MicrophoneBotcamp';
 
 const Chat = () => {
     return (
-        <Fragment>
+        <ChatWrapper>
             <HeaderWrapper>
                 <LogoBotcamp width='200px'/>
-                <LogoutBotcamp />
+                <Link to='/'>
+                    <LogoutBotcamp />
+                </Link>
             </HeaderWrapper>
-            <InputBotcamp name='message' id='message' placeholder='Diz aí' />
-        </Fragment>
+            <FooterWrapper>
+                <InputBotcamp name='message' id='message' placeholder='Diz aí' type='text' />
+                <AttachmentBotcamp/>
+                <MicrophoneBotcamp width='30px' height='30px'/>
+            </FooterWrapper>
+        </ChatWrapper>
     );
 };
 

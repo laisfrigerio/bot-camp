@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import LoginWrapper from "../../components/LoginWrapper/index";
 import LogoBotcamp from "../../components/LogoBotcamp/index";
@@ -8,7 +9,9 @@ const Login = () => {
     return (
         <LoginWrapper>
             <LogoBotcamp width='248px'/>
-            <BtnBotcamp content='Login' />
+            <Link to='/chat'>
+                <BtnBotcamp content='Login' />
+            </Link>
         </LoginWrapper>
     );
 };

@@ -13,6 +13,7 @@ const LoginWrapper = styled.main`
     background-repeat: no-repeat;
     padding-top: 120px;
     padding-bottom: 80px;
+    background-color: #1a1a3c;
 `;
 
 export default LoginWrapper;
