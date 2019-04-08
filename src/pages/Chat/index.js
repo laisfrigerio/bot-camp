@@ -1,15 +1,19 @@
-import React from "react";
+import React, { Fragment } from 'react';
 
-import HeaderWrapper from "../../components/HeaderWrapper";
-import LogoBotcamp from "../../components/LogoBotcamp";
-import LogoutBotcamp from "../../components/LogoutBotcamp";
+import HeaderWrapper from '../../components/HeaderWrapper';
+import LogoBotcamp   from '../../components/LogoBotcamp';
+import LogoutBotcamp from '../../components/LogoutBotcamp';
+import InputBotcamp from '../../components/InputBotcamp';
 
 const Chat = () => {
     return (
-        <HeaderWrapper>
-            <LogoBotcamp width='200px'/>
-            <LogoutBotcamp />
-        </HeaderWrapper>
+        <Fragment>
+            <HeaderWrapper>
+                <LogoBotcamp width='200px'/>
+                <LogoutBotcamp />
+            </HeaderWrapper>
+            <InputBotcamp name='message' id='message' placeholder='Diz aí' />
+        </Fragment>
     );
 };
 
