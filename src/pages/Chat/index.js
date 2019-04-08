@@ -2,28 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ChatWrapper from '../../components/ChatWrapper';
-import HeaderWrapper from '../../components/HeaderWrapper';
-import FooterWrapper from '../../components/FooterWrapper';
+import ChatHeaderWrapper from '../../components/ChatHeaderWrapper';
+import ChatFooterWrapper from '../../components/ChatFooterWrapper';
 import LogoBotcamp   from '../../components/LogoBotcamp';
 import LogoutBotcamp from '../../components/LogoutBotcamp';
-import InputBotcamp from '../../components/InputBotcamp';
-import AttachmentBotcamp from '../../components/AttachmentBotcamp';
-import MicrophoneBotcamp from '../../components/MicrophoneBotcamp';
+import ChatInput from '../../components/ChatInput';
+import ChatAttachmentIcon from '../../components/ChatAttachmentIcon';
+import ChatMicrophoneIcon from '../../components/ChatMicrophoneIcon';
 
 const Chat = () => {
     return (
         <ChatWrapper>
-            <HeaderWrapper>
+            <ChatHeaderWrapper>
                 <LogoBotcamp width='200px'/>
                 <Link to='/'>
                     <LogoutBotcamp />
                 </Link>
-            </HeaderWrapper>
-            <FooterWrapper>
-                <InputBotcamp name='message' id='message' placeholder='Diz aí' type='text' />
-                <AttachmentBotcamp/>
-                <MicrophoneBotcamp width='30px' height='30px'/>
-            </FooterWrapper>
+            </ChatHeaderWrapper>
+            <ChatFooterWrapper>
+                <ChatInput name='message' id='message' placeholder='Diz aí' type='text' />
+                <ChatAttachmentIcon/>
+                <ChatMicrophoneIcon width='30px' height='30px'/>
+            </ChatFooterWrapper>
         </ChatWrapper>
     );
 };

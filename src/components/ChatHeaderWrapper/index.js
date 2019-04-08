@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderWrapper = styled.header`
+const ChatHeaderWrapper = styled.header`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,4 +15,4 @@ const HeaderWrapper = styled.header`
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
 `;
 
-export default HeaderWrapper;
+export default ChatHeaderWrapper;

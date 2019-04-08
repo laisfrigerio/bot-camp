@@ -19,7 +19,7 @@ const MicrophoneIcon = styled.div`
     box-shadow: -2px 2px 4px 0 rgba(0, 0, 0, 0.25);
 `;
 
-const MicrophoneBotcamp = ({width, height = 'auto'}) => (
+const ChatMicrophoneIcon = ({width, height = 'auto'}) => (
     <MicrophoneIcon>
         <Image
             src={logo}
@@ -30,4 +30,4 @@ const MicrophoneBotcamp = ({width, height = 'auto'}) => (
     </MicrophoneIcon>
 );
 
-export default MicrophoneBotcamp;
+export default ChatMicrophoneIcon;

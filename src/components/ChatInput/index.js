@@ -7,15 +7,16 @@ const Input = styled.input.attrs(({name, id, placeholder, type, props}) => ({
     placeholder: placeholder,
     type: type,
     ...props
-}))
-`
-    width: 100%;
-    box-shadow: 0 -2px 8px 0 rgba(0, 0, 0, 0.1);
-    background-color: #fbfbff;
+}))`
+    width: calc(100% - 105px);
     padding: 13px 0 13px 16px;
+    
+    &:focus {
+        outline:none;   
+    }
 `;
 
-const InputBotcamp = ({name, id, placeholder, type, ...props}) => {
+const ChatInput = ({name, id, placeholder, type, ...props}) => {
     return <Input
                 name={name}
                 id={id}
@@ -25,4 +26,4 @@ const InputBotcamp = ({name, id, placeholder, type, ...props}) => {
             />
 };
 
-export default InputBotcamp;
+export default ChatInput;

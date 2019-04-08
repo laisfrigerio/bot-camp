@@ -10,7 +10,7 @@ const AttachmentIcon = styled.div`
     bottom: 2px;
 `;
 
-const AttachmentBotcamp = ({width, height = 'auto'}) => (
+const ChatAttachmentIcon = ({width, height = 'auto'}) => (
     <AttachmentIcon>
         <Image
             src={logo}
@@ -21,4 +21,4 @@ const AttachmentBotcamp = ({width, height = 'auto'}) => (
     </AttachmentIcon>
 );
 
-export default AttachmentBotcamp;
+export default ChatAttachmentIcon;
