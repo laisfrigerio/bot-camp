@@ -12,7 +12,18 @@ const ChatHeaderWrapper = styled.header`
     width: 100vw;
     height: auto;
     padding: 10px 16px;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    //clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 90%);
+    
+    ::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        border: 0px solid transparent;
+        border-top: 15px solid #1a1a3c;
+        border-left-width: 100vw;
+    }
 `;
 
 export default ChatHeaderWrapper;
