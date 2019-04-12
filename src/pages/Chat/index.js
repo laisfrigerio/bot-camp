@@ -21,8 +21,8 @@ const Chat = () => {
             </ChatHeaderWrapper>
             <ChatFooterWrapper>
                 <ChatInput name='message' id='message' placeholder='Diz aí' type='text' />
-                <ChatAttachmentIcon/>
-                <ChatMicrophoneIcon width='30px' height='30px'/>
+                {/*<ChatAttachmentIcon/>*/}
+                {/*<ChatMicrophoneIcon width='30px' height='30px'/>*/}
             </ChatFooterWrapper>
         </ChatWrapper>
     );
