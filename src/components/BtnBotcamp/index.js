@@ -9,6 +9,7 @@ const Button = styled.button`
     font-size: 20px;
     border-radius: 25px;
     text-transform: uppercase;
+    cursor: pointer;
 `;
 
 const BtnBotCamp = ({ content }) => <Button>{content}</Button>;

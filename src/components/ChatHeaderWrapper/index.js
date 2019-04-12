@@ -17,7 +17,7 @@ const ChatHeaderWrapper = styled.header`
     ::after {
         content: " ";
         position: absolute;
-        bottom: 0;
+        bottom: 1px;
         left: 0;
         transform: translateY(100%);
         border: 0px solid transparent;
