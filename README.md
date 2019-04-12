@@ -20,8 +20,8 @@ You will also see any lint errors in the console.
 
 - Login screen
 
-![Login screen](https://github.com/laisfrigerio/bot-camp/blob/aula-05/screenshots/branch/login-screen.jpg "Tela de Login")
+![Login screen](https://github.com/laisfrigerio/bot-camp/blob/aula-05/screenshots/login-screen.jpg "Tela de Login")
 
 - Chat screen
 
-![Chat screen](https://github.com/laisfrigerio/bot-camp/blob/aula-05/screenshots/branch/chat-screen.jpg "Tela do chat")
+![Chat screen](https://github.com/laisfrigerio/bot-camp/blob/aula-05/screenshots/chat-screen.jpg "Tela do chat")
