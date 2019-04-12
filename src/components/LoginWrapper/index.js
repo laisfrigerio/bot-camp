@@ -10,7 +10,8 @@ const LoginWrapper = styled.main`
     width: 100vw;
     height: 100vh;
     background-image: url(${background});
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    background-position: center;
     padding-top: 120px;
     padding-bottom: 80px;
     background-color: #1a1a3c;

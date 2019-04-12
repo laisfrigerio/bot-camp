@@ -22,10 +22,10 @@ const Chat = () => {
                 </Link>
             </ChatHeaderWrapper>
             <ChatContentWrapper>
-                <ChatMessageUser>CPF</ChatMessageUser>
+                <ChatMessageUser>!cpf</ChatMessageUser>
             </ChatContentWrapper>
             <ChatFooterWrapper>
-                <ChatInput name='message' id='message' placeholder='Diz aí' type='text' />
+                <ChatInput name='message' id='message-1' placeholder='Diz aí' type='text' />
                 {/*<ChatAttachmentIcon/>*/}
                 {/*<ChatMicrophoneIcon width='30px' height='30px'/>*/}
             </ChatFooterWrapper>
