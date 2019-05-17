@@ -14,6 +14,7 @@ const ChatMessageUser = styled.p`
     margin: 0 16px 20px auto;
     padding: 10px 0 10px 15px;
     
+    /**
     ::after {
         content: " ";
         position: absolute;
@@ -23,6 +24,7 @@ const ChatMessageUser = styled.p`
         border-right: 20px solid transparent;
         border-top: 20px solid #ed5a48;
     }
+    */
 `;
 
 export default ChatMessageUser;

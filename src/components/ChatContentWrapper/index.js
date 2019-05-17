@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ChatContentWrapper = styled.article`
+const ChatContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;

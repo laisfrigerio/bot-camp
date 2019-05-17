@@ -7,10 +7,9 @@ import ChatFooterWrapper from '../../components/ChatFooterWrapper';
 import LogoBotcamp   from '../../components/LogoBotcamp';
 import LogoutBotcamp from '../../components/LogoutBotcamp';
 import ChatInput from '../../components/ChatInput';
-import ChatAttachmentIcon from '../../components/ChatAttachmentIcon';
-import ChatMicrophoneIcon from '../../components/ChatMicrophoneIcon';
 import ChatContentWrapper from "../../components/ChatContentWrapper";
 import ChatMessageUser from "../../components/ChatMessageUser";
+import ChatMessageRobot from "../../components/ChatMessageRobot";
 
 const Chat = () => {
     return (
@@ -23,6 +22,7 @@ const Chat = () => {
             </ChatHeaderWrapper>
             <ChatContentWrapper>
                 <ChatMessageUser>!cpf</ChatMessageUser>
+                <ChatMessageRobot />
             </ChatContentWrapper>
             <ChatFooterWrapper>
                 <ChatInput name='message' id='message-1' placeholder='Diz aí' type='text' />
