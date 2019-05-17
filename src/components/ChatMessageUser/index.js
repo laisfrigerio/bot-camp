@@ -1,20 +1,18 @@
 import styled from "styled-components";
 
-const ChatMessageUser = styled.div`
+const ChatMessageUser = styled.p`
     box-sizing: border-box;
     position: relative;
-    width: 257px;
-    height: 40px;
+    width: auto;
+    min-width: 257px;
+    height: auto;
     background-color: rgba(238, 62, 37, 0.83);
-    border-radius: 10px;
+    border-radius: 10px 0 10px 10px;
     color: #fff;
     font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 20px;
-    margin-right: 16px;
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-family: Roboto, 'Open Sans', sans-serif;
+    margin: 0 16px 20px auto;
+    padding: 10px 0 10px 15px;
     
     ::after {
         content: " ";
