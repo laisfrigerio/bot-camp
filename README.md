@@ -24,4 +24,4 @@ You will also see any lint errors in the console.
 
 - Chat screen
 
-![Chat screen](https://github.com/laisfrigerio/bot-camp/blob/aula-05/screenshots/chat-screen.png "Tela do chat")
+![Chat screen](https://github.com/laisfrigerio/bot-camp/blob/aula-06/screenshots/chat-screen.png "Tela do chat")
