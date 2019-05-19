@@ -17,12 +17,15 @@ const Input = styled.input.attrs(({name, id, placeholder, type, props}) => ({
     }
 `;
 
-const ChatInput = ({name, id, placeholder, type, ...props}) => {
+const ChatInput = ({name, id, placeholder, type, value, onKeyDown, onChange, ...props}) => {
     return <Input
                 name={name}
                 id={id}
                 placeholder={placeholder}
                 type={type}
+                value={value}
+                onChange={onChange}
+                onKeyDown={onKeyDown}
                 {...props}
             />
 };

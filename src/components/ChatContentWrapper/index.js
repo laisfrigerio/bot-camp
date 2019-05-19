@@ -1,6 +1,9 @@
+import React from "react";
 import styled from "styled-components";
+import ChatMessageUser from "../ChatMessageUser";
+import ChatMessageRobot from "../ChatMessageRobot";
 
-const ChatContentWrapper = styled.div`
+const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -10,4 +13,18 @@ const ChatContentWrapper = styled.div`
     overflow: auto;
 `;
 
-export default ChatContentWrapper;
+const ChatContentWrapper = ({messages}) => {
+  return (
+   <Wrapper>
+     {messages.map((message, index) => {
+       if (message.type === 'user') {
+         return <ChatMessageUser key={index}>{message.message}</ChatMessageUser>
+       } else {
+         return <ChatMessageRobot key={index}/>
+       }
+     })}
+   </Wrapper>
+  );
+};
+
+export default ChatContentWrapper ;
