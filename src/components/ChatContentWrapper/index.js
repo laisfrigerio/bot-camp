@@ -18,9 +18,9 @@ const ChatContentWrapper = ({messages}) => {
    <Wrapper>
      {messages.map((message, index) => {
        if (message.type === 'user') {
-         return <ChatMessageUser key={index}>{message.message}</ChatMessageUser>
+         return <ChatMessageUser key={index}>{message.content}</ChatMessageUser>
        } else {
-         return <ChatMessageRobot key={index}/>
+         return <ChatMessageRobot key={index} content={message.content}/>
        }
      })}
    </Wrapper>

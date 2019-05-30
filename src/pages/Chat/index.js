@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import ChatWrapper from '../../components/ChatWrapper';
@@ -9,76 +9,55 @@ import LogoutBotcamp from '../../components/LogoutBotcamp';
 import ChatInput from '../../components/ChatInput';
 import ChatContentWrapper from "../../components/ChatContentWrapper";
 
-class Chat extends Component {
-
-  constructor () {
-    super();
-    this.state = {
-      messages: [
-        {
-        message: '!cpf',
-        type: 'user'
-        },
-        {
-          message: '099.733.969-10',
-          type: 'robot'
-        }
-      ],
-      currentMessage: '',
-      key: '',
+const Chat = () => {
+  const [messages, setMessages] = useState([
+    {
+      content: '!cpf',
+      type: 'user'
+    },
+    {
+      content: '099.733.969-10',
+      type: 'robot'
     }
-  }
+  ]);
+  const [currentMessage, setCurrentMessage] = useState("");
 
-  onChangeCurrentMessage = (event) => {
-    this.setState({ currentMessage: event.target.value});
+  const handleChange = (event) => {
+    setCurrentMessage(event.target.value);
   };
 
-  addMessage = (event) => {
-    this.setState({ currentMessage: event.target.value, key: event.key}, () => {
-      if (this.state.key === 'Enter') {
-        let messages = this.state.messages;
-        const message = {
-          type: 'user',
-          message: this.state.currentMessage
-        };
-        messages.push(message);
-        this.setState({
-          messages: messages,
-          currentMessage: '',
-          key: '',
-        });
-
-        console.log(this.state.messages);
-      }
-    });
+  const handleSubmit = (event) => {
+    handleChange(event);
+    if (event.key === 'Enter') {
+      setMessages(old => [...old, {type: 'user', content: currentMessage}]);
+      setCurrentMessage("");
+    }
   };
 
-  render() {
-    return (
-      <ChatWrapper>
-        <ChatHeaderWrapper>
-          <LogoBotcamp width='200px'/>
-          <Link to='/'>
-            <LogoutBotcamp />
-          </Link>
-        </ChatHeaderWrapper>
-        <ChatContentWrapper messages={this.state.messages}>
-        </ChatContentWrapper>
-        <ChatFooterWrapper>
-          <ChatInput
-            name='message'
-            id='message-1'
-            placeholder='Diz aí'
-            type='text'
-            value={this.state.currentMessage}
-            onChange={this.onChangeCurrentMessage}
-            onKeyDown={this.addMessage} />
-          {/*<ChatAttachmentIcon/>*/}
-          {/*<ChatMicrophoneIcon width='30px' height='30px'/>*/}
-        </ChatFooterWrapper>
-      </ChatWrapper>
-    );
-  }
+  return (
+    <ChatWrapper>
+      <ChatHeaderWrapper>
+        <LogoBotcamp width='200px'/>
+        <Link to='/'>
+          <LogoutBotcamp />
+        </Link>
+      </ChatHeaderWrapper>
+      <ChatContentWrapper messages={messages}>
+      </ChatContentWrapper>
+      <ChatFooterWrapper>
+        <ChatInput
+          name='message'
+          id='message-1'
+          placeholder='Diz aí'
+          type='text'
+          value={currentMessage}
+          onChange={handleChange}
+          onKeyDown={handleSubmit} />
+        {/*<ChatAttachmentIcon/>*/}
+        {/*<ChatMicrophoneIcon width='30px' height='30px'/>*/}
+      </ChatFooterWrapper>
+    </ChatWrapper>
+  );
 };
 
 export default Chat;

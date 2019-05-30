@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import AvatarRobot from '../../components/ChatMessageRobot/AvatarRobot';
 import MessageRobot from '../../components/ChatMessageRobot/MessageRobot';
-import logo from "../../img/robot.png";
+import avatar from "../../img/robot.png";
 import Image from "../ImageBotcamp";
 
 const Wrapper = styled.div`
@@ -17,18 +17,18 @@ const Wrapper = styled.div`
     padding: 10px;
 `;
 
-const ChatMessageRobot = () => {
+const ChatMessageRobot = ({content}) => {
     return (
         <Wrapper>
             <AvatarRobot>
                 <Image
-                    src={logo}
+                    src={avatar}
                     alt='robot'
                     width='30px'
                     height='30px'
                 />
             </AvatarRobot>
-            <MessageRobot>099.77.969-10</MessageRobot>
+            <MessageRobot>{content}</MessageRobot>
         </Wrapper>
     );
 };
