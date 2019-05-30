@@ -8,6 +8,8 @@ import LogoBotcamp   from '../../components/LogoBotcamp';
 import LogoutBotcamp from '../../components/LogoutBotcamp';
 import ChatInput from '../../components/ChatInput';
 import ChatContentWrapper from "../../components/ChatContentWrapper";
+import ChatAttachmentIcon from "../../components/ChatAttachmentIcon";
+import ChatMicrophoneIcon from "../../components/ChatMicrophoneIcon";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
@@ -42,8 +44,7 @@ const Chat = () => {
           <LogoutBotcamp />
         </Link>
       </ChatHeaderWrapper>
-      <ChatContentWrapper messages={messages}>
-      </ChatContentWrapper>
+      <ChatContentWrapper messages={messages} />
       <ChatFooterWrapper>
         <ChatInput
           name='message'
@@ -53,8 +54,8 @@ const Chat = () => {
           value={currentMessage}
           onChange={handleChange}
           onKeyDown={handleSubmit} />
-        {/*<ChatAttachmentIcon/>*/}
-        {/*<ChatMicrophoneIcon width='30px' height='30px'/>*/}
+        <ChatAttachmentIcon/>
+        <ChatMicrophoneIcon width='30px' height='30px'/>
       </ChatFooterWrapper>
     </ChatWrapper>
   );
