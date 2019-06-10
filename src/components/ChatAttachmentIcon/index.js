@@ -8,16 +8,23 @@ const AttachmentIcon = styled.div`
     position: absolute;
     right: 55px;
     bottom: 2px;
+    
+    > input {
+      display: none;
+    }
 `;
 
-const ChatAttachmentIcon = ({width, height = 'auto'}) => (
+const ChatAttachmentIcon = ({width, height = 'auto', onChange}) => (
     <AttachmentIcon>
-        <Image
+        <label htmlFor="file">
+          <Image
             src={logo}
             alt='attachment icon'
             width={width}
             height={height}
-        />
+          />
+        </label>
+        <input type="file" id="file" onChange={onChange} />
     </AttachmentIcon>
 );
 

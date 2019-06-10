@@ -8,8 +8,7 @@ const Input = styled.input.attrs(({name, id, placeholder, type, props}) => ({
     type: type,
     ...props
 }))`
-    //width: calc(100% - 105px);
-    width: 100vw;
+    width: calc(100% - 105px);
     padding: 13px 0 13px 16px;
     
     &:focus {

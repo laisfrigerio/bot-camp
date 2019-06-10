@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import ChatMessageUser from "../ChatMessageUser";
-import ChatMessageRobot from "../ChatMessageRobot";
+import ChatMessageUser from "../../components/ChatMessageUser/index";
+import ChatMessageRobot from "../../components/ChatMessageRobot/index";
+import Image from "../../components/ImageBotcamp";
 
 const Wrapper = styled.div`
     display: flex;
@@ -18,10 +19,10 @@ const ChatContentWrapper = ({messages}) => {
    <Wrapper>
      {messages.map((message, index) => {
        if (message.type === 'user') {
-         return <ChatMessageUser key={index}>{message.content}</ChatMessageUser>
-       } else {
-         return <ChatMessageRobot key={index} content={message.content}/>
+         if (message.contentType === "text") return <ChatMessageUser key={index}>{message.content}</ChatMessageUser>
        }
+
+       return <ChatMessageRobot key={index} content={message.content}/>
      })}
    </Wrapper>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-import LoginWrapper from "../../components/LoginWrapper/index";
+import LoginWrapper from "../../wrapper/LoginWrapper/index";
 import LogoBotcamp from "../../components/LogoBotcamp/index";
 import BtnBotcamp  from "../../components/BtnBotcamp/index";
 

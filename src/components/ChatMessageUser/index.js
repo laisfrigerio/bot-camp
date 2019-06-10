@@ -12,7 +12,7 @@ const ChatMessageUser = styled.p`
     font-size: 16px;
     font-family: Roboto, 'Open Sans', sans-serif;
     margin: 0 16px 20px auto;
-    padding: 10px 0 10px 15px;
+    padding: 10px 5px 10px 15px;
     
     /**
     ::after {
