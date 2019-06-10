@@ -41,7 +41,7 @@ const Chat = () => {
     event.persist();
     const file = event.target.files[0];
     if (file.type.includes("image/")) {
-      setMessages(old => [...old, {component: <Image className="image" src={URL.createObjectURL(file)} />}]);
+      setMessages(old => [...old, {component: <Image className="chat-image" src={URL.createObjectURL(file)} />}]);
     }
     setCurrentMessage("");
   };

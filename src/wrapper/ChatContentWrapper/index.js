@@ -10,7 +10,7 @@ const Wrapper = styled.div`
     margin-top: 25px;
     overflow: auto;
     
-    .image {
+    .chat-image {
         width: 500px;
         height: auto;
         box-sizing: border-box;
