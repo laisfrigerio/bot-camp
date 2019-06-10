@@ -23,6 +23,15 @@ const Wrapper = styled.div`
         margin: 0 16px 20px auto;
         padding: 10px 15px 10px 15px;
     }
+    
+    .chat-audio {
+        box-sizing: border-box;
+        position: relative;
+        background-color: rgba(238,62,37,0.83);
+        border-radius: 10px 0 10px 10px;
+        margin: 0 16px 20px auto;
+        padding: 10px 15px 10px 15px;
+    }
 `;
 
 const ChatContentWrapper = ({messages}) => {

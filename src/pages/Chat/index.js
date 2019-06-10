@@ -42,8 +42,9 @@ const Chat = () => {
     const file = event.target.files[0];
     if (file.type.includes("image/")) {
       setMessages(old => [...old, {component: <Image className="chat-image" src={URL.createObjectURL(file)} />}]);
+    } else if (file.type.includes("audio/")) {
+      setMessages(old => [...old, {component: (<audio class="chat-audio" controls><source src={URL.createObjectURL(file)} type={file.type} /></audio>)}]);
     }
-    setCurrentMessage("");
   };
 
   return (
