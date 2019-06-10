@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import ChatMessageUser from "../../components/ChatMessageUser/index";
-import ChatMessageRobot from "../../components/ChatMessageRobot/index";
-import Image from "../../components/ImageBotcamp";
 
 const Wrapper = styled.div`
     display: flex;
@@ -12,17 +9,27 @@ const Wrapper = styled.div`
     height: calc(100vh - 150px);
     margin-top: 25px;
     overflow: auto;
+    
+    .image {
+        width: 500px;
+        height: auto;
+        box-sizing: border-box;
+        position: relative;
+        background-color: rgba(238,62,37,0.83);
+        border-radius: 10px 0 10px 10px;
+        color: #fff;
+        font-size: 16px;
+        font-family: Roboto,'Open Sans',sans-serif;
+        margin: 0 16px 20px auto;
+        padding: 10px 15px 10px 15px;
+    }
 `;
 
 const ChatContentWrapper = ({messages}) => {
   return (
    <Wrapper>
      {messages.map((message, index) => {
-       if (message.type === 'user') {
-         if (message.contentType === "text") return <ChatMessageUser key={index}>{message.content}</ChatMessageUser>
-       }
-
-       return <ChatMessageRobot key={index} content={message.content}/>
+         return <React.Fragment key={index}>{message.component}</React.Fragment>
      })}
    </Wrapper>
   );

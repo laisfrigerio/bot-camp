@@ -22,6 +22,7 @@ const ChatAttachmentIcon = ({width, height = 'auto', onChange}) => (
             alt='attachment icon'
             width={width}
             height={height}
+            multiple
           />
         </label>
         <input type="file" id="file" onChange={onChange} />

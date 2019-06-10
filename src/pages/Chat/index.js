@@ -10,22 +10,20 @@ import ChatInput from '../../components/ChatInput';
 import ChatContentWrapper from "../../wrapper/ChatContentWrapper";
 import ChatAttachmentIcon from "../../components/ChatAttachmentIcon";
 import ChatMicrophoneIcon from "../../components/ChatMicrophoneIcon";
+import ChatMessageUser from "../../components/ChatMessageUser";
+import Image from "../../components/ImageBotcamp";
+import ChatMessageRobot from "../../components/ChatMessageRobot";
 
 const Chat = () => {
   const [messages, setMessages] = useState([
     {
-      content: '!cpf',
-      contentType: 'text',
-      type: 'user'
+      component: <ChatMessageUser>!cpf</ChatMessageUser>
     },
     {
-      content: '099.733.969-10',
-      contentType: 'text',
-      type: 'robot'
+      component: <ChatMessageRobot content="099.733.969-10" />
     }
   ]);
   const [currentMessage, setCurrentMessage] = useState("");
-  const [file, setFile] = useState([]);
 
   const handleChange = (event) => {
     setCurrentMessage(event.target.value);
@@ -34,17 +32,15 @@ const Chat = () => {
   const handleSubmit = (event) => {
     handleChange(event);
     if (event.key === 'Enter') {
-      setMessages(old => [...old, {type: 'user', contentType: "text", content: currentMessage}]);
+      setMessages(old => [...old, {component: <ChatMessageUser>{currentMessage}</ChatMessageUser>}]);
       setCurrentMessage("");
     }
   };
 
   const uploadFiles = (event) => {
-    setFile(event.target.files);
-    setMessages(old => [...old, {type: 'user', contentType: "file", content: ""}]);
+    event.persist();
+    setMessages(old => [...old, {component: <Image className="image" src={URL.createObjectURL(event.target.files[0])} />}]);
     setCurrentMessage("");
-    console.log("file");
-    console.log(event.target.files);
   };
 
   return (
