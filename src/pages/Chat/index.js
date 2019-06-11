@@ -37,7 +37,7 @@ const Chat = () => {
     }
   };
 
-  const uploadFiles = (event) => {
+  const handleUploadFiles = (event) => {
     event.persist();
     const file = event.target.files[0];
 
@@ -50,16 +50,13 @@ const Chat = () => {
     }
   };
 
-  const recordAudio = () => {
+  const handleRecordAudio = () => {
     let mediaRecorder =  null;
-    console.log("init");
 
     navigator.mediaDevices.getUserMedia({ audio: true })
       .then(stream => {
         mediaRecorder = new MediaRecorder(stream);
         setAudioRecorder(mediaRecorder);
-
-        console.log("init 1");
 
         let audioFrames = [];
         mediaRecorder.ondataavailable = data => audioFrames.push(data.data);
@@ -74,7 +71,7 @@ const Chat = () => {
       });
   };
 
-  const storeRecord = () => {
+  const handleStoreRecord = () => {
     audioRecorder.stop();
     setIsRecording(false);
   };
@@ -82,7 +79,6 @@ const Chat = () => {
   const scrollToBottom = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
   };
-
   useEffect(scrollToBottom, [messages]);
 
   return (
@@ -103,8 +99,8 @@ const Chat = () => {
           value={currentMessage}
           onChange={handleChange}
           onKeyDown={handleSubmit} />
-        <ChatAttachmentIcon onChange={uploadFiles}/>
-        <ChatMicrophoneIcon width='30px' height='30px' onMouseDown={recordAudio} onMouseUp={storeRecord} isRecording={isRecording}/>
+        <ChatAttachmentIcon onChange={handleUploadFiles}/>
+        <ChatMicrophoneIcon width='30px' height='30px' onMouseDown={handleRecordAudio} onMouseUp={handleStoreRecord} isRecording={isRecording}/>
       </ChatFooterWrapper>
     </ChatWrapper>
   );
