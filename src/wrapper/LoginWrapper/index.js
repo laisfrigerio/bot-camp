@@ -5,7 +5,7 @@ const LoginWrapper = styled.main`
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100vw;
     height: 100vh;
