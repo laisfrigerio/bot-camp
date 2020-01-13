@@ -1,12 +1,19 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-import LoginForm from "../../containers/forms/LoginForm";
-import Auth from "../../containers/Auth";
+import LoginWrapper from "../../wrapper/LoginWrapper/index";
+import LogoBotcamp from "../../components/LogoBotcamp/index";
+import BtnBotcamp  from "../../components/BtnBotcamp/index";
 
 const Login = () => {
-    return <Auth path='/login'>
-        <LoginForm />
-    </Auth>
+    return (
+        <LoginWrapper>
+            <LogoBotcamp width='248px'/>
+            <Link to='/chat'>
+                <BtnBotcamp content='Login' />
+            </Link>
+        </LoginWrapper>
+    );
 };
 
 export default Login;
